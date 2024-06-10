@@ -12,4 +12,5 @@ const connectDB = async (done) => {
     }
 }
 
-export { connectDB, db }
+export { connectDB, db };
+

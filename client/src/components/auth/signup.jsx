@@ -1,10 +1,10 @@
-import React, { Fragment, useCallback, useReducer, useState } from 'react'
-import { Grant, Tick, Google, Microsoft, Mail, } from '../../assets'
-import { Link, useNavigate } from 'react-router-dom'
 import { useGoogleLogin } from '@react-oauth/google'
-import FormFeild from './FormFeild'
 import axios from 'axios'
+import React, { Fragment, useCallback, useReducer, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Google, Grant, Mail, Tick } from '../../assets'
 import instance from '../../config/instance'
+import FormFeild from './FormFeild'
 import './style.scss'
 
 const reducer = (state, { type, status }) => {
@@ -137,7 +137,7 @@ const SignupComponent = () => {
                       />
                     </div>
                     <div>
-                      <button type='submit' >Continue</button>
+                      <button type='submit' className='continue-button'>Continue</button>
                     </div>
                   </form>
 
@@ -206,7 +206,7 @@ const SignupComponent = () => {
                       </p>
                     </div>
 
-                    <button type='submit'>Continue</button>
+                    <button type='submit' className='continue-button'>Continue</button>
 
                   </div>
                   <div data-for="acc-sign-up-login">

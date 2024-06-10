@@ -1,5 +1,48 @@
 @import "../index.scss";
 
+@keyframes border-animation {
+  0% {
+    border-color: transparent transparent transparent rgb(248, 245, 245);
+  }
+  25% {
+    border-color: transparent transparent rgb(224, 203, 203) transparent;
+  }
+  50% {
+    border-color: transparent rgb(212, 159, 159) transparent transparent;
+  }
+  75% {
+    border-color: rgb(202, 120, 120) transparent transparent transparent;
+  }
+  100% {
+    border-color: transparent transparent transparent red;
+  }
+}
+
+.continue-button {
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #0a1031;
+  color: white;
+  border: 6px solid transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  animation: border-animation 4s linear infinite;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.continue-button:hover {
+  background-color: #0a1031;
+}
+
 @keyframes sendingDot2 {
   0% {
     background: transparent;
@@ -208,7 +251,6 @@
     }
 
     .text {
-      // background: rgba(52, 53, 65, 1);
       color: hsla(0, 0%, 100%, 0.5);
 
       a {
@@ -553,7 +595,7 @@
         margin-top: 0.5rem;
 
         button {
-          width: 5em;
+          width: 10em;
           height: 3em;
           text-align: center;
           background: #191949;
@@ -566,6 +608,19 @@
 
           &:hover {
             background: #191949;
+          }
+
+          //"Log in" and "Sign up" buttons
+          &.continue-button {
+            animation: border-animation 4s linear infinite;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #0a1031;
+            color: white;
+            border: 6px solid transparent;
+
+            &:hover {
+              background-color: #0a1031;
+            }
           }
         }
       }

@@ -61,7 +61,7 @@ const RegisterPendings = ({ _id }) => {
           }} />
         </div>
 
-        <button type='submit'>Continue</button>
+        <button className='continue-button' type='submit'>Continue</button>
 
         <div>
           <p>By clicking "Continue", you agree to our <span></span>, <br /><span>Privacy policy</span> and confirm you're 18 years or older.</p>

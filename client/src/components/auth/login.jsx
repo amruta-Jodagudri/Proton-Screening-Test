@@ -1,11 +1,11 @@
-import React, { useReducer, useState } from "react";
-import { Grant, Google, Microsoft } from "../../assets";
-import { Link, useNavigate } from "react-router-dom";
-import FormFeild from "./FormFeild";
 import { useGoogleLogin } from "@react-oauth/google";
+import React, { useReducer, useState } from "react";
 import { useDispatch } from "react-redux";
-import { insertUser } from "../../redux/user";
+import { Link, useNavigate } from "react-router-dom";
+import { Google, Grant } from "../../assets";
 import instance from "../../config/instance";
+import { insertUser } from "../../redux/user";
+import FormFeild from "./FormFeild";
 import "./style.scss";
 
 const reducer = (state, { type, status }) => {
@@ -175,7 +175,7 @@ const LoginEmail = ({
           />
         </div>
         <div>
-          <button type="submit">Continue</button>
+          <button className="continue-button" type="submit">Continue</button>
         </div>
       </form>
 
@@ -246,7 +246,7 @@ const LoginEmailPassword = ({
           )}
         </div>
 
-        <button type="submit">Continue</button>
+        <button className="continue-button" type="submit">Continue</button>
 
         <div className="forgot">
           <Link to={"/forgot"}>Forgot password?</Link>
@@ -276,7 +276,7 @@ const Two_Step_Auth = ({ formData, handleInput, otpHandle, state }) => {
               error={state?.error}
             />
           </div>
-          <button type="submit">Continue</button>
+          <button className="continue-button" type="submit">Continue</button>
         </div>
         <div data-for="acc-sign-up-login">
           <span>Don't have an account?</span>
@@ -288,3 +288,4 @@ const Two_Step_Auth = ({ formData, handleInput, otpHandle, state }) => {
 };
 
 export default LoginComponent;
+

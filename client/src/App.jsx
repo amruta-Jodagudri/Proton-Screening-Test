@@ -1,11 +1,11 @@
 import { createContext, useEffect, useLayoutEffect, useState } from "react";
-import { Menu } from "./components";
-import { Routes, Route } from "react-router-dom";
-import { Error, Forgot, Login, Main, Signup } from "./page";
 import { useSelector } from "react-redux";
-import ProtectedRoute from "./protected";
+import { Route, Routes } from "react-router-dom";
+import { Menu } from "./components";
 import Loading from "./components/loading/loading";
 import instance from "./config/instance";
+import { Error, Forgot, Login, Main, Signup } from "./page";
+import ProtectedRoute from "./protected";
 
 export const documentsContext = createContext({
   documents: [],
@@ -144,4 +144,3 @@ const App = () => {
 };
 
 export default App;
-

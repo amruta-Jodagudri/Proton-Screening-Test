@@ -1,8 +1,8 @@
 import React, { Fragment, useCallback, useReducer, useState } from 'react'
-import { Grant, Tick, Mail } from '../../assets'
 import { useNavigate } from 'react-router-dom'
-import FormFeild from './FormFeild'
+import { Grant, Mail, Tick } from '../../assets'
 import instance from '../../config/instance'
+import FormFeild from './FormFeild'
 import './style.scss'
 
 const reducer = (state, { type, status }) => {
@@ -124,7 +124,7 @@ const ForgotComponent = ({ isRequest, userId, secret }) => {
                                                 {state?.error && <div className='error'><div>!</div> The user not exists.</div>}
                                             </div>
 
-                                            <button type='submit'>Continue</button>
+                                            <button type='submit' className='continue-button'>Continue</button>
 
                                             <div>
                                                 <button type='button' onClick={() => {
@@ -149,7 +149,7 @@ const ForgotComponent = ({ isRequest, userId, secret }) => {
                                             <p>Please check the email address {formData?.email} for instructions to reset your password.</p>
                                         </div>
 
-                                        <button onClick={() => formHandleMail(null)}>Resend Mail</button>
+                                        <button className='continue-button' onClick={() => formHandleMail(null)}>Resend Mail</button>
                                     </div >
                                 )
                         }
@@ -207,7 +207,7 @@ const ForgotComponent = ({ isRequest, userId, secret }) => {
                                     </p>
                                 </div>
 
-                                <button type='submit'>Reset password</button>
+                                <button className='continue-button' type='submit'>Reset password</button>
                             </div>
                         </form>
                     </Fragment>

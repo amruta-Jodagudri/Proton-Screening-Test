@@ -51,6 +51,7 @@ const Login = () => {
 
             <div className="btns">
               <button
+                className="continue-button"
                 onClick={() => {
                   navigate("/login/auth");
                 }}
@@ -58,6 +59,7 @@ const Login = () => {
                 Log in
               </button>
               <button
+                className="continue-button"
                 onClick={() => {
                   navigate("/signup");
                 }}
